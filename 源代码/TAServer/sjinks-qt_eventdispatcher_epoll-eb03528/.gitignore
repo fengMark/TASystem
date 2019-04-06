@@ -1,0 +1,11 @@
+*.a
+*.o
+*.moc
+*.prl
+*.pro.user
+moc_*.cpp
+Makefile
+Makefile.*
+/tests/tst_*
+.qmake.stash
+*.gch

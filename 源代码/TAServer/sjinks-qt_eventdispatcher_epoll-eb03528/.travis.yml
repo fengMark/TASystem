@@ -1,0 +1,24 @@
+language: cpp
+
+sudo: required
+dist: trusty
+
+env:
+  - QT_SELECT=4
+  - QT_SELECT=5
+
+compiler:
+  - gcc
+  - clang
+
+branches:
+  only:
+    - master
+
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get -qq -y install libqt4-dev libqt4-private-dev qtbase5-dev qtbase5-private-dev qtchooser
+  - git submodule update --init --recursive
+
+script:
+  - ./build.sh
